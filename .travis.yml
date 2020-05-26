@@ -8,7 +8,6 @@ android:
 
 install: ant
 
-
 addons:
   apt:
     packages:
@@ -26,9 +25,9 @@ before_install:
   - git submodule update --init --recursive
 script:
   - cp debug.keystore ~/.android/debug.keystore
-  - sh gen-version.sh travis build
-  - sh gen-config.sh test
-  - python2 makepak.py xash-extras assets/extras.pak
+  - sh android/gen-version.sh travis build
+  - sh android/gen-config.sh test
+  - python2 scripts/makepak.py xash-extras assets/extras.pak
   - ndk-build NDK_TOOLCHAIN_VERSION=4.8 -j2 APP_CFLAGS="-w" APP_ABI="armeabi-v7a-hard"
   - ant debug -Dtest.version=1
   - cp bin/xashdroid-debug.apk xashdroid-armv7.apk
