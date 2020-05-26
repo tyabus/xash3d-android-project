@@ -1,0 +1,21 @@
+
+# Build data
+libs/armeabi*
+libs/x86
+obj
+bin
+gen
+
+# Private info
+local.properties
+
+# Builds
+*.apk
+
+# VKontakte gives a shit when uploading APK
+*.bin 
+
+# Generated
+assets/extras.pak
+res/values/git-rev.xml
+src/in/celest/xash3d/XashConfig.java
