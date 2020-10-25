@@ -109,12 +109,6 @@ public class XashActivity extends Activity {
 		super.onCreate( savedInstanceState );
 		mEngineReady = false;
 		
-		if( sdk >= 8 && CertCheck.dumbAntiPDALifeCheck( this ) )
-		{
-			finish();
-			return;
-		}
-		
 		// So we can call stuff from static callbacks
 		mSingleton = this;
 
@@ -484,13 +478,6 @@ public class XashActivity extends Activity {
 			mMinHeight = 300;
 			
 			final String allowed = "in.celest.xash3d.cs16client";
-			
-			if( !FWGSLib.checkGameLibDir( gamelibdir, allowed ) || 
-				CertCheck.dumbCertificateCheck( getContext(), allowed, null, true ) )
-			{
-				finish();
-				return false;
-			}
 		}
 		
 		if( gdbsafe != null || Debug.isDebuggerConnected() )
