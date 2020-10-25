@@ -94,6 +94,7 @@
 	<string name="update">Update</string>
 	<string name="no_updates">No updates was found</string>
 	<string name="checking_updates">Working...</string>
+	<string name="git_revisions">No git version information</string>
 	<!-- Update -->
 	
 	<!-- Write check  -->
