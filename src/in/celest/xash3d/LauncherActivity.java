@@ -23,7 +23,7 @@ public class LauncherActivity extends Activity
 {
 	// public final static String ARGV = "in.celest.xash3d.MESSAGE";
 	public final static int sdk = FWGSLib.sdk;
-	public final static String UPDATE_LINK = "https://api.github.com/repos/FWGS/xash3d-android-project/releases"; // releases/latest doesn't return prerelease and drafts
+	public final static String UPDATE_LINK = "https://api.github.com/repos/tyabus/xash3d-android-project/releases"; // releases/latest doesn't return prerelease and drafts
 	static SharedPreferences mPref;
 	
 	static EditText cmdArgs, resPath, writePath, resScale, resWidth, resHeight;
@@ -47,13 +47,7 @@ public class LauncherActivity extends Activity
 		if ( sdk >= 21 )
 			super.setTheme( 0x01030224 );
 		else super.setTheme( 0x01030005 );
-				
-		if( sdk >= 8 && CertCheck.dumbAntiPDALifeCheck( this ) )
-		{
-			finish();
-			return;
-		}
-		
+
 		setContentView(R.layout.activity_launcher);
 
 		TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
