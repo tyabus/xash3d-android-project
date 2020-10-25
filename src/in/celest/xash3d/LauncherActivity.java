@@ -253,11 +253,6 @@ public class LauncherActivity extends Activity
 			}
 		});
 
-		// disable autoupdater for Google Play
-		if( !XashConfig.GP_VERSION && mPref.getBoolean("check_updates", true))
-		{
-			new CheckUpdate(getBaseContext(),true, false).execute(UPDATE_LINK);
-		}
 		FWGSLib.changeButtonsStyle((ViewGroup)tabHost.getParent());
 		hideResolutionSettings( !resolution.isChecked() );
 		hideRodirSettings( !useRoDir.isChecked() );
