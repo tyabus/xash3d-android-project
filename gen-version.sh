@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GIT_REV_XML=gen/res/values/git-rev.xml
+GIT_REV_XML=res/values/git-rev.xml
 
 mkdir -p $(dirname $GIT_REV_XML)
 
