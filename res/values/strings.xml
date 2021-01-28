@@ -82,9 +82,8 @@
 		&#8226; msayan for tutorial-view library\n
 	</string>
 	<string name="about_links" translatable="false">
-		&#8226; <a href="https://vk.com/xashdroid">VK</a>\n
 		&#8226; <a href="http://moddb.com/games/xash3d-android">ModDB</a>\n
-		&#8226; <a href="https://github.com/FWGS">GitHub</a>
+		&#8226; <a href="https://github.com/tyabus">GitHub</a>
 		&#8226; <a href="http://xash.su/pp/privacy-policy-xash3d.html">Privacy Policy</a>
 	</string>
 	<!-- About -->
