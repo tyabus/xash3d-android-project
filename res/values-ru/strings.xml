@@ -34,8 +34,6 @@
 	<string name="use_rodir_auto">Использовать каталог приложения</string>
 	<string name="resize_off">Клавиатура не меняет размер экрана игры</string>
 	<string name="resize_on">Клавиатура меняет размер экрана игры</string>
-	<string name="update_button">Проверять обновления при запуске</string>
-	<!--<string name="update_to_beta">Обновлять до нестабильной версии, если доступно</string>-->
 	<string name="immersive_mode">Включить Immersive Mode(Полноэкранный режим, для KitKat и старше)</string>
 	<string name="resolution">Установка разрешения игры</string>
 	<string name="resolution_scale">Масштабировать сохраняя соотношение сторон</string>
@@ -61,13 +59,6 @@
 	<!-- About -->
 	<string name="about_copyright">Flying With Gauss не связан с Valve или с любыми из их партнеров. Все авторские права принадлежат их соответственным обладателям..</string>
 	<!-- About -->
-	
-	<!-- Update -->
-	<string name="update_message">%s доступен! Скачай его сейчас!</string>
-	<string name="update">Обновить</string>
-	<string name="no_updates">Обновления не найдены</string>
-	<string name="checking_updates">Работаю...</string>
-	<!-- Update -->
 	
 	<!-- Write check  -->
 	<string name="write_failed">Тест чтения не удался</string>

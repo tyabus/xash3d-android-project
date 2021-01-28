@@ -21,14 +21,12 @@ import su.xash.fwgslib.*;
 
 public class LauncherActivity extends Activity 
 {
-	// public final static String ARGV = "in.celest.xash3d.MESSAGE";
 	public final static int sdk = FWGSLib.sdk;
-	public final static String UPDATE_LINK = "https://api.github.com/repos/tyabus/xash3d-android-project/releases"; // releases/latest doesn't return prerelease and drafts
 	static SharedPreferences mPref;
-	
+
 	static EditText cmdArgs, resPath, writePath, resScale, resWidth, resHeight;
 	static ToggleButton useVolume, resizeWorkaround, useRoDir;
-	static CheckBox	checkUpdates, immersiveMode, useRoDirAuto;
+	static CheckBox	immersiveMode, useRoDirAuto;
 	static TextView tvResPath, resResult;
 	static RadioButton radioScale, radioCustom;
 	static RadioGroup scaleGroup;
@@ -83,8 +81,6 @@ public class LauncherActivity extends Activity
 		cmdArgs      = (EditText) findViewById(R.id.cmdArgs);
 		useVolume    = (ToggleButton) findViewById( R.id.useVolume );
 		resPath      = (EditText) findViewById( R.id.cmd_path );
-		checkUpdates = (CheckBox)findViewById( R.id.check_updates );
-		//updateToBeta = (CheckBox)findViewById( R.id.check_betas );
 		pixelSpinner = (Spinner) findViewById( R.id.pixelSpinner );
 		resizeWorkaround = (ToggleButton) findViewById( R.id.enableResizeWorkaround );
 		tvResPath    = (TextView) findViewById( R.id.textView_path );
@@ -147,8 +143,6 @@ public class LauncherActivity extends Activity
 			}
 		});
 		useVolume.setChecked(mPref.getBoolean("usevolume",true));
-		checkUpdates.setChecked(mPref.getBoolean("check_updates",true));
-		//updateToBeta.setChecked(mPref.getBoolean("check_betas", false));
 		updatePath(mPref.getString("basedir", FWGSLib.getDefaultXashPath() ) );
 		cmdArgs.setText(mPref.getString("argv","-dev 3 -log"));
 		pixelSpinner.setSelection(mPref.getInt("pixelformat", 0));
@@ -378,7 +372,6 @@ public class LauncherActivity extends Activity
 		editor.putString("basedir", resPath.getText().toString());
 		editor.putInt("pixelformat", pixelSpinner.getSelectedItemPosition());
 		editor.putBoolean("enableResizeWorkaround",resizeWorkaround.isChecked());
-		editor.putBoolean("check_updates", checkUpdates.isChecked());
 		editor.putBoolean("resolution_fixed", resolution.isChecked());
 		editor.putBoolean("resolution_custom", radioCustom.isChecked());
 		editor.putFloat("resolution_scale", getResolutionScale() );

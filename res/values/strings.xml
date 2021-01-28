@@ -40,8 +40,6 @@
 	<string name="pixel_format" translatable="false">Pixel format:</string>
 	<string name="resize_off">Keyboard does not resize screen</string>
 	<string name="resize_on">Keyboard resizes screen</string>
-	<string name="update_button">Check updates on start</string>
-	<!--<string name="update_to_beta">Update to unstable version if available</string>-->
 	<string name="immersive_mode">Enable Immersive Mode(fullscreen, KitKat or higher)</string>
 	<string name="resolution">Fixed screen resolution (experimental)</string>
 	<string name="resolution_scale">Scale screen keeping aspect ratio</string>
@@ -87,14 +85,6 @@
 		&#8226; <a href="http://xash.su/pp/privacy-policy-xash3d.html">Privacy Policy</a>
 	</string>
 	<!-- About -->
-	
-	<!-- Update -->
-	<string name="update_message">%s is available! Download it now!</string>
-	<string name="update">Update</string>
-	<string name="no_updates">No updates was found</string>
-	<string name="checking_updates">Working...</string>
-	<string name="git_revisions">No git version information</string>
-	<!-- Update -->
 	
 	<!-- Write check  -->
 	<string name="write_failed">Write test has failed</string>
