@@ -953,6 +953,34 @@ public class XashActivity extends Activity {
 		fMouseShown = show != 0;
 		handler.showMouse( fMouseShown );
 	}
+	
+	public static void GenericUpdatePage()
+	{
+		mSingleton.startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse("https://github.com/tyabus/xash3d/releases/latest" ) ) );
+	}
+	
+	public static void PlatformUpdatePage()
+	{
+		GenericUpdatePage();
+	}
+	
+	// Just opens browser or update page
+	public static void shellExecute( String path )
+	{
+		if( path.equals("PlatformUpdatePage"))
+		{
+			PlatformUpdatePage();
+			return;
+		}
+		else if( path.equals( "GenericUpdatePage" ))
+		{
+			GenericUpdatePage();
+			return;
+		}
+	
+		final Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(path));
+		mSingleton.startActivity(intent);
+	}
 }
 
 
