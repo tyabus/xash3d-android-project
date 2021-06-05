@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Replace org.libsdl.app with the identifier of your game below, e.g.
-     com.gamemaker.game
--->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="in.celest.xash3d.hl"
-	android:versionCode="1277"
+	android:versionCode="2249"
 	android:versionName="0.19.4"
 	android:installLocation="auto">
 
@@ -24,19 +22,6 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-	
-		<!--<activity android:name="in.celest.xash3d.SteamActivity"
-			android:label="Steam"
-			android:windowSoftInputMode="adjustResize"
-			android:launchMode="singleTask">
-		
-			<intent-filter>
-				<action android:name="in.celest.xash3d.SteamActivity"/>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-		
-		</activity>-->
 		
 		<activity android:name="in.celest.xash3d.ShortcutActivity" 
 			android:label="@string/text_shortcut" 
@@ -51,18 +36,7 @@
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</activity>
-		<!--
-		<activity android:name="org.libsdl.app.SDLActivity"
-			android:screenOrientation="sensorLandscape"
-			android:configChanges="orientation|screenSize"
-			android:label="@string/app_name"
-			android:taskAffinity="org.libsdl.app.SDLActivity" >
-			<intent-filter>
-				<action android:name="in.celest.xash3d.START" />
-				<category android:name="android.intent.category.DEFAULT" />
-			</intent-filter>
-		</activity>
-		-->
+
 		<activity android:name="in.celest.xash3d.XashActivity"
 			android:screenOrientation="sensorLandscape"
 			android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize"
@@ -90,7 +64,6 @@
 				<data android:scheme="package" />
 			</intent-filter>
 		</receiver>
-		<!--<service android:name="in.celest.xash3d.SteamService" />-->
 		<meta-data android:name="android.max_aspect" android:value="2.1" />
 	</application>
 
