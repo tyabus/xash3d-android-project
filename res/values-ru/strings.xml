@@ -43,8 +43,8 @@
 	<!-- Launcher(advanced) -->
 	
 	<!-- Launcher(buttons) -->
-	<string name="about_button">О Xash3D FWGS</string>
-	<string name="launch_button">Запустить Xash3D FWGS!</string>
+	<string name="about_button">О Xash3D</string>
+	<string name="launch_button">Запустить Xash3D!</string>
 	<!-- Launcher(buttons) -->
 	
 	<!-- Shorcut -->
@@ -57,7 +57,7 @@
 	<!-- Shorcut -->
 	
 	<!-- About -->
-	<string name="about_copyright">Flying With Gauss не связан с Valve или с любыми из их партнеров. Все авторские права принадлежат их соответственным обладателям..</string>
+	<string name="about_copyright">Все авторские права принадлежат их соответственным обладателям.</string>
 	<!-- About -->
 	
 	<!-- Write check  -->

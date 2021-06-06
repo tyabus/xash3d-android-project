@@ -4,7 +4,7 @@
 	<string name="launcher_name" translatable="false">Xash3D FWGS</string>
 	<string name="launcher_name_test" translatable="false">Xash3D FWGS Test</string>
 	<string name="version_string" translatable="false">v0.19.4</string>
-	
+
 	<!-- Generic -->
 	<string name="cancel">Cancel</string>
 	<string name="ok">Ok</string>
@@ -50,7 +50,7 @@
 	
 	<!-- Launcher(buttons) -->
 	<string name="about_button">About</string>
-	<string name="launch_button">Launch Xash3D FWGS!</string>
+	<string name="launch_button">Launch Xash3D!</string>
 	<!-- Launcher(buttons) -->
 	
 	<!-- Shorcut -->
@@ -64,16 +64,15 @@
 	
 	<!-- About -->
 	<string name="about_main" translatable="false">Xash3D FWGS</string>
-	<string name="about_copyright">Flying With Gauss is not affiliated with Valve or any of their partners. All copyrights reserved to their respective owners.</string>
+	<string name="about_copyright">All copyrights reserved to their respective owners.</string>
 	<!-- Seems Android skips any line breaks and tabs here. -->
 	<string name="about_authors" translatable="false">
-		Port to Android by Flying With Gauss team: \n
-		&#8226; a1batross\n
-		&#8226; mittorn \n
-		&#8226; nicknekit\n
-		&#8226; nekonomicon.\n
+		Bugfixed and improved Xash3D engine by:\n
+		&#8226; Mr0maks\n
+		&#8226; tyabus\n
 		
 		Special thanks to:\n
+		&#8226; FWGS Team for cross platform engine port\n
 		&#8226; Beloko for some touch controls textures\n
 		&#8226; Uncle Mike for Xash3D engine\n
 		&#8226; Valve for Half-Life\n
@@ -82,7 +81,6 @@
 	<string name="about_links" translatable="false">
 		&#8226; <a href="http://moddb.com/games/xash3d-android">ModDB</a>\n
 		&#8226; <a href="https://github.com/tyabus">GitHub</a>
-		&#8226; <a href="http://xash.su/pp/privacy-policy-xash3d.html">Privacy Policy</a>
 	</string>
 	<!-- About -->
 	
