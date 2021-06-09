@@ -44,12 +44,12 @@
 	
 	<!-- Launcher(buttons) -->
 	<string name="about_button">О Xash3D</string>
-	<string name="launch_button">Запустить Xash3D!</string>
+	<string name="launch_button">Запустить Игру!</string>
 	<!-- Launcher(buttons) -->
 	
 	<!-- Shorcut -->
-	<string name="text_shortcut">Ярлык Xash3D FWGS</string>
-	<string name="text_shortcut_test">Ярлык Xash3D FWGS Test</string>
+	<string name="text_shortcut">Ярлык Xash3D</string>
+	<string name="text_shortcut_test">Ярлык Xash3D Test</string>
 	<string name="shortcut_button_save">Сохранить ярлык</string>
 	<string name="gamedir">Каталог мода</string>
 	<string name="pkgname">Пакет мода (только для экспертов)</string>

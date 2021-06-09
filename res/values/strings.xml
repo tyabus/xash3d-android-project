@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name" translatable="false">Xash3D FWGS</string>
-	<string name="launcher_name" translatable="false">Xash3D FWGS</string>
-	<string name="launcher_name_test" translatable="false">Xash3D FWGS Test</string>
+	<string name="app_name" translatable="false">Xash3D</string>
+	<string name="launcher_name" translatable="false">Xash3D</string>
+	<string name="launcher_name_test" translatable="false">Xash3D Test</string>
 	<string name="version_string" translatable="false">v0.19.4</string>
 
 	<!-- Generic -->
@@ -50,12 +50,12 @@
 	
 	<!-- Launcher(buttons) -->
 	<string name="about_button">About</string>
-	<string name="launch_button">Launch Xash3D!</string>
+	<string name="launch_button">Launch Game!</string>
 	<!-- Launcher(buttons) -->
 	
 	<!-- Shorcut -->
-	<string name="text_shortcut">Xash3D FWGS shortcut</string>
-	<string name="text_shortcut_test">Xash3D FWGS Test shortcut</string>
+	<string name="text_shortcut">Xash3D shortcut</string>
+	<string name="text_shortcut_test">Xash3D Test shortcut</string>
 	<string name="shortcut_button_save">Save shortcut</string>
 	<string name="gamedir">Mod directory</string>
 	<string name="pkgname">Mod package name (experts only)</string>
@@ -63,7 +63,7 @@
 	<!-- Shorcut -->
 	
 	<!-- About -->
-	<string name="about_main" translatable="false">Xash3D FWGS</string>
+	<string name="about_main" translatable="false">Xash3D</string>
 	<string name="about_copyright">All copyrights reserved to their respective owners.</string>
 	<!-- Seems Android skips any line breaks and tabs here. -->
 	<string name="about_authors" translatable="false">
