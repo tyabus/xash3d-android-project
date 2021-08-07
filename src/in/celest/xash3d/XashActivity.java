@@ -451,10 +451,7 @@ public class XashActivity extends Activity {
 				}
 			}
 		}
-
-		if( sdk >= 5 )
-			startService( new Intent( getBaseContext(), XashService.class ) );
-
+		startService( new Intent( getBaseContext(), XashService.class ) );
 		mEngineReady = true;
 	}
 	
@@ -887,8 +884,6 @@ public class XashActivity extends Activity {
 			return;
 		
 		Log.v( TAG, "setIcon(" + path + ")" );
-		if( sdk < 5 )
-			return;
 		
 		try
 		{
@@ -916,10 +911,6 @@ public class XashActivity extends Activity {
 		SharedPreferences.Editor editor = mPref.edit();
 		editor.putBoolean("successfulRun", true);
 		editor.commit();
-		
-		if( sdk < 5 )
-			return;
-		
 		XashService.notification.contentView.setTextViewText( XashService.status_text, title );
 		NotificationManager nm = ( NotificationManager )mSingleton.getApplicationContext().getSystemService( Context.NOTIFICATION_SERVICE );
 		nm.notify( 100, XashService.notification );
@@ -1029,10 +1020,7 @@ class EngineSurface extends SurfaceView implements SurfaceHolder.Callback, View.
 		setFocusableInTouchMode( true );
 		requestFocus();
 		setOnKeyListener( this );
-		if( XashActivity.sdk >= 5 )
-			setOnTouchListener( new EngineTouchListener_v5() );
-		else
-			setOnTouchListener( new EngineTouchListener_v1() );
+		setOnTouchListener( new EngineTouchListener() );
 	}
 	
 	// Called when we have a valid drawing surface
@@ -1498,17 +1486,8 @@ class XashInputConnection extends BaseInputConnection
 		return super.deleteSurroundingText(beforeLength, afterLength);	
 	}
 }
-class EngineTouchListener_v1 implements View.OnTouchListener
-{
-	// Touch events
-	public boolean onTouch( View v, MotionEvent event )
-	{
-		XashActivity.nativeTouch( 0, event.getAction(), event.getX(), event.getY() );
-		return true;
-	}
-}
 
-class EngineTouchListener_v5 implements View.OnTouchListener
+class EngineTouchListener implements View.OnTouchListener
 {
 	float lx = 0, ly = 0;
 	boolean secondarypressed = false;
