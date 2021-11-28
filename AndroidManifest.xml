@@ -2,7 +2,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="in.celest.xash3d.hl"
-	android:versionCode="2249"
+	android:versionCode="notset"
 	android:versionName="0.19.4"
 	android:installLocation="auto">
 
