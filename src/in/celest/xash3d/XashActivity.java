@@ -118,12 +118,7 @@ public class XashActivity extends Activity {
 			WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
 		getWindow().setFlags( flags, flags );
 
-		// landscapeSensor is not supported until API9
-		if( sdk < 9 )
-			setRequestedOrientation( 0 );
-			
 		mPref = this.getSharedPreferences( "engine", 0 );
-		
 		mUseRoDir = mPref.getBoolean("use_rodir", false);
 		mWriteDir = mPref.getString("writedir", FWGSLib.getExternalFilesDir( this ));
 		

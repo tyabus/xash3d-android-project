@@ -147,12 +147,9 @@ public class FWGSLib
 			return externalFilesDir;
 		try
 		{
-			if( sdk >= 8 )
-			{
-				Thread t = new GetExternalFilesDir(ctx);
-				t.start();
-				t.join(2000);
-			}
+			Thread t = new GetExternalFilesDir(ctx);
+			t.start();
+			t.join(2000);
 		}
 		catch(Exception e)
 		{
