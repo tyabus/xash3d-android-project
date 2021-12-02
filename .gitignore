@@ -1,4 +1,3 @@
-
 # Build data
 libs/armeabi*
 libs/x86
@@ -19,3 +18,9 @@ local.properties
 assets/extras.pak
 res/values/git-rev.xml
 src/in/celest/xash3d/XashConfig.java
+.ant-targets-build.xml
+
+# Misc
+*.swp
+*.save
+*.bak
