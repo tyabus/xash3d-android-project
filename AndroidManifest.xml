@@ -68,7 +68,7 @@
 	</application>
 
 	<!-- Android 3.0 is minimal for now -->
-	<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19" />
+	<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="21" />
 
 	<!-- OpenGL ES 1.1 -->
 	<uses-feature android:glEsVersion="0x00010000" /> 
