@@ -1,0 +1,6 @@
+File named "extras.pak" (if present) contains sounds (in the media folder) and images (in the gfx folder)
+which belong to Valve Corporation and intended to be used for non-commerical purposes ONLY.
+
+Default touch control images (touch_default folder in the "extras.pak" file) are licensed under CC BY 4.0 license and
+were made by MaximBomba <albinagrigoreva00@gmail.com>
+
