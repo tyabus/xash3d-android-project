@@ -8,6 +8,9 @@ XASH_SDL ?= 0
 # If non-zero, works only if single ABI selected
 XASH_THREAD_NUM ?= 0
 
+# Google fun for old android versions
+APP_PLATFORM := android-11
+
 #NDK_TOOLCHAIN_VERSION := clang
 
 ifneq ($(NDK_TOOLCHAIN_VERSION),clang)
