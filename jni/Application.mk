@@ -5,6 +5,7 @@
 
 XASH_64BIT ?= 0
 XASH_SDL ?= 0
+XASH_VGUI ?= 0
 # If non-zero, works only if single ABI selected
 XASH_THREAD_NUM ?= 0
 
@@ -48,3 +49,6 @@ ifeq ($(XASH_SDL),1)
 	APP_MODULES += SDL2
 endif
 
+ifeq ($(XASH_VGUI),1)
+	APP_MODULES += vgui_support
+endif
