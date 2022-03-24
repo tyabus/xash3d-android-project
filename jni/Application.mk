@@ -25,6 +25,7 @@ CFLAGS_OPT_ARM := -mthumb -mfpu=neon -mcpu=cortex-a9 -pipe -mvectorize-with-neon
 CFLAGS_OPT_ARM64 := -pipe
 CFLAGS_OPT_X86_64 := -pipe -funroll-loops
 CFLAGS_OPT_X86 := -mtune=atom -march=atom -mssse3 -mfpmath=sse -funroll-loops -pipe -DVECTORIZE_SINCOS -DHAVE_EFFICIENT_UNALIGNED_ACCESS
+CFLAGS_HARDFP := -D_NDK_MATH_NO_SOFTFP=1 -mhard-float -mfloat-abi=hard -DLOAD_HARDFP -DSOFTFP_LINK
 APPLICATIONMK_PATH = $(call my-dir)
 
 NANOGL_PATH := $(APPLICATIONMK_PATH)/src/NanoGL/nanogl
@@ -36,9 +37,10 @@ HLSDK_PATH  := $(APPLICATIONMK_PATH)/src/HLSDK/halflife/
 XASH3D_CONFIG := $(APPLICATIONMK_PATH)/xash3d_config.mk
 
 ifeq ($(XASH_64BIT),1)
-APP_ABI := x86_64 arm64-v8a
+#APP_ABI := x86_64 arm64-v8a
+APP_ABI := arm64-v8a
 else
-APP_ABI := x86 armeabi-v7a
+APP_ABI := x86 armeabi-v7a-hard
 endif
 # Use armeabi-v7a-hard to enable hardfloat (r12b and higher ndks dosent support hard float)
 # Mods are built with both ABI support

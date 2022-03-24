@@ -1,6 +1,9 @@
 ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
 LOCAL_CFLAGS += $(CFLAGS_OPT_ARM) -mfloat-abi=softfp
 endif
+ifeq ($(TARGET_ARCH_ABI),armeabi-v7a-hard)
+LOCAL_CFLAGS += $(CFLAGS_OPT_ARM) $(CFLAGS_HARDFP)
+endif
 ifeq ($(TARGET_ARCH_ABI),arm64-v8a)
 LOCAL_CFLAGS += $(CFLAGS_OPT_ARM64)
 endif
