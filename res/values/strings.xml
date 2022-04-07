@@ -73,14 +73,15 @@
 		
 		Special thanks to:\n
 		&#8226; FWGS for cross platform engine port\n
-		&#8226; MaximBomba for touch controls textures\n
+		&#8226; MaximBomba for touch controls & icon images\n
 		&#8226; Uncle Mike for Xash3D engine\n
-		&#8226; Valve for Half-Life\n
+		&#8226; Valve Software for Half-Life\n
 		&#8226; msayan for tutorial-view library\n
 	</string>
 	<string name="about_links" translatable="false">
-		&#8226; <a href="http://moddb.com/games/xash3d-android">ModDB</a>\n
-		&#8226; <a href="https://github.com/tyabus">GitHub</a>
+		&#8226; <a href="https://moddb.com/games/xash3d-android">ModDB</a>\n
+		&#8226; <a href="https://github.com/Mr0maks">GitHub (Mr0maks)</a>\n
+		&#8226; <a href="https://github.com/tyabus">GitHub (tyabus)</a>
 	</string>
 	<!-- About -->
 	

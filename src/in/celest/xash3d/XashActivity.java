@@ -423,7 +423,7 @@ public class XashActivity extends Activity {
 
 		if( mPref.getBoolean( "resolution_fixed", false ) )
 		{
-			if( mPref.getBoolean( "resolution_custom", false ) )
+			if( mPref.getBoolean( "resolution_custom", false ) && !bIsCstrike )
 			{
 				mForceWidth = mPref.getInt( "resolution_width", 854 );
 				mForceHeight = mPref.getInt( "resolution_height", 480 );
@@ -1051,7 +1051,7 @@ class EngineSurface extends SurfaceView implements SurfaceHolder.Callback, View.
 		{
 			int newWidth, newHeight;
 			resizing = true;
-			if( XashActivity.mForceHeight != 0 && XashActivity.mForceWidth != 0 )
+			if( XashActivity.mForceHeight != 0 && XashActivity.mForceWidth != 0 && bIsCstrike )
 			{
 				newWidth = XashActivity.mForceWidth;
 				newHeight = XashActivity.mForceHeight;
