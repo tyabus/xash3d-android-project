@@ -1051,7 +1051,7 @@ class EngineSurface extends SurfaceView implements SurfaceHolder.Callback, View.
 		{
 			int newWidth, newHeight;
 			resizing = true;
-			if( XashActivity.mForceHeight != 0 && XashActivity.mForceWidth != 0 && bIsCstrike )
+			if( XashActivity.mForceHeight != 0 && XashActivity.mForceWidth != 0 )
 			{
 				newWidth = XashActivity.mForceWidth;
 				newHeight = XashActivity.mForceHeight;
