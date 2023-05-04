@@ -2,6 +2,7 @@ package su.xash.fwgslib;
 
 import android.app.*;
 import android.content.*;
+import android.content.pm.*;
 import android.graphics.*;
 import android.graphics.drawable.*;
 import android.net.*;
@@ -63,6 +64,26 @@ public class FWGSLib
 		}
 		
 		return ret;
+	}
+	
+	public static ApplicationInfo getApplicationInfo( Context ctx, String pkgName, int flags ) throws PackageManager.NameNotFoundException
+	{
+		PackageManager pm = ctx.getPackageManager();
+		if( pkgName == null ) pkgName = ctx.getPackageName();
+		return pm.getApplicationInfo( pkgName, flags );
+	}
+	
+	public static String getNativeLibDir( Context ctx )
+	{
+		try
+		{
+			ApplicationInfo ai = getApplicationInfo( ctx, null, 0 );
+			return ai.nativeLibraryDir;
+		}
+		catch( Exception e )
+		{
+			return ctx.getFilesDir().getParentFile().getPath() + "/lib";
+		}
 	}
 	
 	public static boolean checkGameLibDir( String gamelibdir, String allowed )

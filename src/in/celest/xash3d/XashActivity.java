@@ -453,7 +453,7 @@ public class XashActivity extends Activity {
 	private boolean setupEnvironment()
 	{
 		Intent intent = getIntent();
-		final String enginedir = getFilesDir().getParentFile().getPath() + "/lib";
+		final String enginedir = FWGSLib.getNativeLibDir( this );
 				
 		String argv       = FWGSLib.getStringExtraFromIntent( intent, "argv", mPref.getString( "argv", "-dev 3 -log" ) );
 		String gamelibdir = FWGSLib.getStringExtraFromIntent( intent, "gamelibdir", enginedir );
