@@ -3,7 +3,9 @@
 	url = https://github.com/FWGS/hlsdk-xash3d
 [submodule "jni/src/NanoGL/nanogl"]
 	path = jni/src/NanoGL/nanogl
-	url = https://github.com/FWGS/nanogl
+	url = https://github.com/tyabus/nanogl
 [submodule "xash-extras"]
 	path = xash-extras
 	url = https://github.com/tyabus/xash-extras
+[submodule "jni/src/NanoGL/nanogl/"]
+	url = https://github.com/tyabus/nanogl

@@ -10,23 +10,28 @@ XASH_VGUI ?= 0
 XASH_THREAD_NUM ?= 0
 
 # Google fun for old android versions
-APP_PLATFORM := android-11
+APP_PLATFORM := android-15
 
 #NDK_TOOLCHAIN_VERSION := clang
 
-ifneq ($(NDK_TOOLCHAIN_VERSION),clang)
-APP_CFLAGS += -Wl,--no-undefined
-else
-APP_CFLAGS +=
-endif
-
 CFLAGS_OPT :=  -O3 -fomit-frame-pointer -ggdb -funsafe-math-optimizations -ftree-vectorize -fgraphite-identity -floop-interchange -funsafe-loop-optimizations -finline-limit=256 -pipe
-CFLAGS_OPT_ARM := -mthumb -mfpu=neon -mcpu=cortex-a9 -pipe -mvectorize-with-neon-quad -DVECTORIZE_SINCOS -fPIC -DHAVE_EFFICIENT_UNALIGNED_ACCESS
+CFLAGS_OPT_ARM := -mthumb -mfpu=neon -mcpu=cortex-a9 -pipe -DVECTORIZE_SINCOS -fPIC -DHAVE_EFFICIENT_UNALIGNED_ACCESS
 CFLAGS_OPT_ARM64 := -pipe
 CFLAGS_OPT_X86_64 := -pipe -funroll-loops
 CFLAGS_OPT_X86 := -mtune=atom -march=atom -mssse3 -mfpmath=sse -funroll-loops -pipe -DVECTORIZE_SINCOS -DHAVE_EFFICIENT_UNALIGNED_ACCESS
 CFLAGS_HARDFP := -D_NDK_MATH_NO_SOFTFP=1 -mhard-float -mfloat-abi=hard -DLOAD_HARDFP -DSOFTFP_LINK
 APPLICATIONMK_PATH = $(call my-dir)
+
+ifneq ($(NDK_TOOLCHAIN_VERSION),clang)
+APP_CFLAGS += -Wl,--no-undefined
+CFLAGS_OPT_ARM += -mvectorize-with-neon-quad
+else
+APP_CFLAGS += -D__ANDROID__
+CFLAGS_OPT_ARM += --target=armv7a-linux-androideabi15
+CFLAGS_OPT_ARM64 += --target=aarch64-linux-android
+CFLAGS_OPT_X86 += --target=i686-linux-android
+CFLAGS_OPT_X86_64 += --target=x86_64-linux-android
+endif
 
 NANOGL_PATH := $(APPLICATIONMK_PATH)/src/NanoGL/nanogl
 
