@@ -10,7 +10,7 @@ XASH_VGUI ?= 0
 XASH_THREAD_NUM ?= 0
 
 # Google fun for old android versions
-APP_PLATFORM := android-15
+APP_PLATFORM := android-17
 
 #NDK_TOOLCHAIN_VERSION := clang
 
