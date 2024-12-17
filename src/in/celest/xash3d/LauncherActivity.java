@@ -1,5 +1,8 @@
 package in.celest.xash3d;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.*;
 import android.content.*;
 import android.graphics.*;
@@ -12,6 +15,9 @@ import android.text.style.*;
 import android.util.*;
 import android.view.*;
 import android.widget.*;
+import android.Manifest;
+import android.content.pm.PackageManager;
+
 import in.celest.xash3d.hl.*;
 import java.io.*;
 import java.net.*;
@@ -35,6 +41,54 @@ public class LauncherActivity extends Activity
 	static LinearLayout rodirSettings; // to easy show/hide
 	
 	static int mEngineWidth, mEngineHeight;
+
+	final static int REQUEST_PERMISSIONS = 42;
+
+	public void onRequestPermissionsResult( int requestCode, String[] permissions, int[] grantResults )
+	{
+		boolean bEssentialPermissionsGranted = true;
+
+		if( requestCode != REQUEST_PERMISSIONS )
+			return;
+
+		for( int i = 0; i < grantResults.length; i++ )
+		{
+			String permission = permissions[i];
+			int grantResult = grantResults[i];
+
+			if( permission.equals( Manifest.permission.READ_EXTERNAL_STORAGE ) || permission.equals(Manifest.permission.WRITE_EXTERNAL_STORAGE ) )
+			{
+				if( grantResult != PackageManager.PERMISSION_GRANTED )
+				{
+					 bEssentialPermissionsGranted = false;
+				}
+			}
+		}
+
+		if( !bEssentialPermissionsGranted )
+		{
+			Toast.makeText( this, "Storage permissions are required!", Toast.LENGTH_LONG ).show();
+			finish();
+		}
+	}
+
+	public void applyPermissions( final String[] permissions, final int code )
+	{
+		List< String > requestPermissions = new ArrayList<>();
+		for( String permission : permissions )
+		{
+			if( checkSelfPermission( permission ) != PackageManager.PERMISSION_GRANTED )
+				requestPermissions.add( permission );
+		}
+
+		if( !requestPermissions.isEmpty() )
+		{
+			String[] requestPermissionsArray = new String[ requestPermissions.size() ];
+			for( int i = 0; i < requestPermissions.size(); i++ )
+				requestPermissionsArray[ i ] = requestPermissions.get( i );
+			requestPermissions( requestPermissionsArray, code );
+		}
+	}
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -246,6 +300,10 @@ public class LauncherActivity extends Activity
 		hideRodirSettings( !useRoDir.isChecked() );
 		updateResolutionResult();
 		toggleResolutionFields();
+
+		// Android 6 target requires this to be requested at a runtime
+		applyPermissions( new String[] { Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE }, REQUEST_PERMISSIONS );
+
 		if( !mPref.getBoolean("successfulRun",false) )
 			showFirstRun();
 	}
