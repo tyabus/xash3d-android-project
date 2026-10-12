@@ -260,15 +260,7 @@ public class LauncherActivity extends Activity
 			}
 		});
 		
-		
-		if( sdk >= 19 )
-		{
-			immersiveMode.setChecked(mPref.getBoolean("immersive_mode", true));
-		}
-		else
-		{
-			immersiveMode.setVisibility(View.GONE); // not available
-		}
+		immersiveMode.setChecked(mPref.getBoolean("immersive_mode", true)); // sdk >= 19
 		
 		resPath.setOnFocusChangeListener( new View.OnFocusChangeListener()
 		{
@@ -435,11 +427,8 @@ public class LauncherActivity extends Activity
 		editor.putFloat("resolution_scale", getResolutionScale() );
 		editor.putInt("resolution_width", getCustomEngineWidth() );
 		editor.putInt("resolution_height", getCustomEngineHeight() );
-		
-		if( sdk >= 19 )
-			editor.putBoolean("immersive_mode", immersiveMode.isChecked());
-		else
-			editor.putBoolean("immersive_mode", false); // just in case...
+		editor.putBoolean("immersive_mode", immersiveMode.isChecked());
+
 		editor.commit();
 		startActivity(intent);
     }
