@@ -60,8 +60,8 @@ public class PagedView extends HorizontalScrollView
 					public void run()
 					{
 						isDelayed = false;
-						// animate to 1/50 of page every 10 ms
-						scrollBy(isInc?pageWidth/50:-pageWidth/50,0);
+						// animate to 1/40 of page every 10 ms
+						scrollBy(isInc?pageWidth/40:-pageWidth/40,0);
 					}
 				},10);
 		}
