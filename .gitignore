@@ -1,4 +1,6 @@
 # Build data
+.gradle/
+build/
 libs/armeabi*
 libs/x86
 obj
@@ -24,3 +26,4 @@ src/in/celest/xash3d/XashConfig.java
 *.swp
 *.save
 *.bak
+.cxx
